@@ -5,7 +5,7 @@ const envSchema = z.object({
   PORT: z
     .string()
     .refine(
-      (port) => parseInt(port) > 2000 && parseInt(port) < 65536,
+      (port) => parseInt(port) > 0 && parseInt(port) < 65536,
       'Invalid port number'
     ),
 })

@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx env-cmd -f .env.development ts-node-dev --respawn src/index.ts",
-    "prod": "npx env-cmd -f .env.production ts-node-dev --respawn src/index.ts",
+    "start": "ts-node-dev --respawn  --transpile-only --ignore-watch node_modules src/index.ts",
+    "dev": "npx env-cmd -f .env.development npm start",
+    "prod": "npx env-cmd -f .env.production npm start",
     "build": "npx tsc"
   },
   "keywords": [],
