@@ -27,4 +27,4 @@ jobs:
     - run: |
           touch .env.production
           echo "${{secrets.PROD_ENV}}" > .env.production
-    - run: npm run prod
+    # - run: npm run prod
